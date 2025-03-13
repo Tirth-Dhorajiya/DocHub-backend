@@ -67,8 +67,5 @@ app.get("/api/test", (req, res) => {
   res.send({ message: "Backend is working!" });
 });
 
-// const PORT = process.env.PORT || 5000;
-// app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
-// Fix for Vercel Deployment: Export the Serverless Function
-module.exports = app;
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
