@@ -62,5 +62,10 @@ app.post("/", upload.single("img"), async (req, res) => {
   });
 });
 
+// Sample API Route
+app.get("/api/test", (req, res) => {
+  res.send({ message: "Backend is working!" });
+});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
